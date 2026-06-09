@@ -36,16 +36,16 @@ body {
 .abc-header__brand {
   display: inline-flex;
   align-items: baseline;
+  justify-self: center;
   color: #ffffff;
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 800;
   line-height: 1;
   text-decoration: none;
-  justify-self: center;
 }
 
 .abc-header__brand-highlight {
-  color: #88BC00;
+  color: #88bc00;
 }
 
 .abc-header__content {
@@ -85,16 +85,6 @@ body {
 .abc-header__counter-total {
   color: #6b7280;
   font-size: 0.8rem;
-}
-
-.abc-main {
-  width: min(1120px, calc(100% - 2rem));
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
-.abc-section {
-  min-height: 8rem;
 }
 
 @media (max-width: 700px) {
