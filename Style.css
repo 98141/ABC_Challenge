@@ -206,3 +206,30 @@ button:hover {
   margin-bottom: 10px;
 }
 
+.footer {
+  background-color: #4a90d9;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.equipo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.miembro {
+  background-color: white;
+  color: #4a90d9;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+}
