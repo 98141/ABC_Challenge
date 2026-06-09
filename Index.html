@@ -1,11 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABC </title>
-</head>
-<body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ABC</title>
+  </head>
+  <body>
+    <nav></nav>
+    <section class="filtros">
+      <button onclick="filtrar('todas')">Todas</button>
+      <button onclick="filtrar('vocal')">Vocales</button>
+    </section>
+    <main class="galeria">
+      <div
+        class="card"
+        data-tipo="vocal"
+        data-vista="false"
+        onclick="voltear(this)"
+      >
+        <div class="card-inner">
+          <div class="card-frente">
+            <h1>A</h1>
+          </div>
+
+          <div class="card-dorso">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2909/2909761.png"
+              alt="Aguacate"
+            />
+            <h3>Aguacate</h3>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        data-tipo="consonante"
+        data-vista="false"
+        onclick="voltear(this)"
+      >
+        <div class="card-inner">
+          <div class="card-frente">
+            <h1>B</h1>
+          </div>
+
+          <div class="card-dorso">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2909/2909761.png"
+              alt="Aguacate"
+            />
+            <h3>Aguacate</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <script src="Script.js"></script>
-</body>
+  </body>
 </html>
