@@ -125,6 +125,13 @@ button:hover {
 .card {
   height: 240px;
   cursor: pointer;
+  --card-accent: #039be2;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.card:hover {
+  filter: drop-shadow(0 12px 18px color-mix(in srgb, var(--card-accent) 35%, transparent));
+  transform: scale(1.06);
 }
 
 .card-inner {
@@ -155,17 +162,26 @@ button:hover {
 
 .card-frente {
   background: #ffffff;
+  border: 3px solid transparent;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover .card-frente {
+  border-color: var(--card-accent);
+  background-color: color-mix(in srgb, var(--card-accent) 14%, #ffffff);
 }
 
 .card-frente h1 {
   font-size: 70px;
-  color: #2563eb;
+  color: var(--card-accent);
 }
 
 .card-dorso {
   background: #ffffff;
   transform: rotateY(180deg);
   padding: 10px;
+  border: 3px solid transparent;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .card-dorso img {

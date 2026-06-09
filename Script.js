@@ -159,11 +159,25 @@ const abecedario = [
 
 let contador = 0;
 
+const coloresCards = [
+    "#f97316",
+    "#22c55e",
+    "#06b6d4",
+    "#8b5cf6",
+    "#ec4899",
+    "#eab308",
+    "#14b8a6",
+    "#ef4444",
+    "#3b82f6",
+    "#84cc16"
+];
+
 function crearCarta({ letra, tipo, palabra, url }) {
     const card = document.createElement("div");
     card.className = "card";
     card.dataset.tipo = tipo;
     card.dataset.vista = "false";
+    card.style.setProperty("--card-accent", coloresCards[Math.floor(Math.random() * coloresCards.length)]);
     card.addEventListener("click", () => voltear(card));
 
     const cardInner = document.createElement("div");
