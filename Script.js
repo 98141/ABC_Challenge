@@ -1,3 +1,10 @@
+let contador=0;
+
+function aumentarContador(){
+    contador++;
+    document.getElementById("contador").textContent= contador;
+}
+
 function voltear(card) {
   card.classList.toggle("volteada");
 
