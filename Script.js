@@ -160,7 +160,7 @@ const abecedario = [
 let contador = 0;
 
 function voltear(card) {
-  card.classList.toggle("volteada");
+    card.classList.toggle("volteada");
 
   if (card.dataset.vista === "false") {
     card.dataset.vista = "true";
@@ -170,17 +170,15 @@ function voltear(card) {
 }
 
 function filtrar(tipo) {
-  const cards = document.querySelectorAll(".card");
+    const cards = document.querySelectorAll(".card");
 
-  cards.forEach((card) => {
-    if (tipo === "todas") {
-      card.style.display = "block";
-    } else {
-      if (card.dataset.tipo === "vocal") {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    }
-  });
+    cards.forEach((card) => {
+        if (tipo === "todas" || card.dataset.tipo === tipo) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
 }
+
+document.addEventListener("DOMContentLoaded", cargarAbecedario);
