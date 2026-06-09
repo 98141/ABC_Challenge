@@ -29,6 +29,52 @@ const abecedario = [
 
 let contador = 0;
 
+function crearCarta({ letra, tipo, palabra, url }) {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.dataset.tipo = tipo;
+    card.dataset.vista = "false";
+    card.addEventListener("click", () => voltear(card));
+
+    const cardInner = document.createElement("div");
+    cardInner.className = "card-inner";
+
+    const cardFrente = document.createElement("div");
+    cardFrente.className = "card-frente";
+
+    const titulo = document.createElement("h1");
+    titulo.textContent = letra;
+    cardFrente.appendChild(titulo);
+
+    const cardDorso = document.createElement("div");
+    cardDorso.className = "card-dorso";
+
+    const imagen = document.createElement("img");
+    imagen.src = url;
+    imagen.alt = palabra;
+
+    const nombre = document.createElement("h3");
+    nombre.textContent = palabra;
+
+    cardDorso.append(imagen, nombre);
+    cardInner.append(cardFrente, cardDorso);
+    card.appendChild(cardInner);
+
+    return card;
+}
+
+function cargarAbecedario() {
+    const galeria = document.getElementById("inicio");
+    const totalLetras = document.getElementById("total-letras");
+
+    galeria.innerHTML = "";
+    abecedario.forEach((item) => {
+        galeria.appendChild(crearCarta(item));
+    });
+
+    totalLetras.textContent = abecedario.length;
+}
+
 function aumentarContador() {
     contador++;
     document.getElementById("contador").textContent = contador;
@@ -39,6 +85,7 @@ function voltear(card) {
 
     if (card.dataset.vista === "false") {
         card.dataset.vista = "true";
+        aumentarContador();
     }
 }
 
@@ -53,3 +100,5 @@ function filtrar(tipo) {
         }
     });
 }
+
+document.addEventListener("DOMContentLoaded", cargarAbecedario);
