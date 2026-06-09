@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABC </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC</title>
+  <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <script src="Script.js"></script>
+  <header class="abc-header">
+    <div class="abc-header__container">
+      <a class="abc-header__brand" href="#inicio" aria-label="Ir al inicio">
+        ABC<span class="abc-header__brand-highlight">edario</span>
+      </a>
+
+      <div class="abc-header__content">
+        <div class="abc-header__counter" aria-label="Letras vistas">
+          <span id="contador" class="abc-header__counter-number">0</span>
+          <span class="abc-header__counter-text">Letras vistas de</span>
+          <span class="abc-header__counter-total">26</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script src="Script.js"></script>
 </body>
 </html>
